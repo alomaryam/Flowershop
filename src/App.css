@@ -28,6 +28,17 @@
   color: #61dafb;
 }
 
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 17pt;
+  color: rgb(58, 55, 55);
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
