@@ -1,5 +1,6 @@
 const ProductItem = (props) => {
   const item = props.item;
+
   return (
     <div>
       <h1> {item.image} </h1>
