@@ -19,7 +19,7 @@ const Home = () => {
   return (
     <div>
       <Title>Florescence</Title>
-      <Sentence>Checkout Our Fresh Blooms!</Sentence>
+      <Sentence>Check Out Our Fresh Blooms!</Sentence>
       <Image alt="flowershop" src={flowershop} />
     </div>
   );
