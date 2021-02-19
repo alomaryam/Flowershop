@@ -5,10 +5,12 @@ import styled from "styled-components";
 const Items = styled.div`
   display: flex;
   justify-content: space-around;
-  color: #54424b;
   text-align: center;
   align-content: center;
   flex-wrap: wrap;
+  font-size: 13pt;
+  background-color: ${(props) => props.theme.backgroundColor};
+  color: ${(props) => props.theme.color};
 `;
 
 let FlowersList = () => {
