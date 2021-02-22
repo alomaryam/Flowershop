@@ -9,7 +9,6 @@ const Items = styled.div`
   align-content: center;
   flex-wrap: wrap;
   font-size: 13pt;
-  background-color: ${(props) => props.theme.backgroundColor};
   color: ${(props) => props.theme.color};
 `;
 

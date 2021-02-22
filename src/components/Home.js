@@ -7,7 +7,6 @@ const Title = styled.h1`
 `;
 const Sentence = styled.p`
   font-size: 17pt;
-  color: #f6f0ec;
   text-align: center;
 `;
 const Image = styled.img`

@@ -1,32 +1,23 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import { createGlobalStyle, ThemeProvider } from "styled-components";
+// import { createGlobalStyle } from "styled-components";
 
-const GlobalStyle = createGlobalStyle`
-body {
-  font-family: Kunstler Script;
-  color: #2c2a30;
-  background-color:#5f5d69;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-`;
-
-const theme = {
-  backgroundColor: "#f6f0ec",
-  color: "#54424b",
-};
+// const GlobalStyle = createGlobalStyle`
+// body {
+//   font-family: Kunstler Script;
+//   color: #2c2a30;
+//   background-color: ${(props) => props.theme.backgroundColor};
+// }
+// code {
+//   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+//     monospace;
+// }
+// `;
 
 ReactDOM.render(
   <React.StrictMode>
-    <GlobalStyle />
-    <ThemeProvider theme={theme}>
-      <App />
-    </ThemeProvider>
+    <App />
   </React.StrictMode>,
   document.getElementById("root")
 );
