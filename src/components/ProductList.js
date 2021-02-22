@@ -20,7 +20,7 @@ let FlowersList = () => {
     flower.name.includes(query)
   ).map((flower) => <ProductItem item={flower} key={flower.id} />);
 
-  console.log("filteredFlowers", flowerList);
+  // console.log("filteredFlowers", flowerList);
 
   return (
     <>
