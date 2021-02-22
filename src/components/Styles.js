@@ -1,5 +1,4 @@
 import styled from "styled-components";
-// import useState from "react";
 
 export const ThemeButton = styled.button`
   font-size: 1em;
@@ -9,5 +8,3 @@ export const ThemeButton = styled.button`
   background-color: ${(props) => props.theme.mainColor};
   color: ${(props) => props.theme.backgroundColor};
 `;
-
-/* <ThemeButton onClick={toggleTheme}>Dark Mode</ThemeButton>; */
