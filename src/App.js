@@ -21,7 +21,7 @@ code {
 const theme = {
   light: {
     backgroundColor: "#ECEDF3",
-    color: "#2c2a30",
+    color: "#B50054",
     mainColor: "#101C28",
   },
   dark: {

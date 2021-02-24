@@ -13,3 +13,13 @@ export const ThemeButton = styled.button`
 export const Logo = styled(Link)`
   padding: 3.5em;
 `;
+
+export const FlowersList = styled(Link)`
+  padding: 3.5em;
+  font-size: 1em;
+  margin: 1.25em;
+  padding: 0.25em 1em;
+  border-radius: 3px;
+  background-color: ${(props) => props.theme.color};
+  color: ${(props) => props.theme.backgroundColor};
+`;
