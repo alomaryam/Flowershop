@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const ThemeButton = styled.button`
   font-size: 1em;
@@ -7,4 +8,8 @@ export const ThemeButton = styled.button`
   border-radius: 3px;
   background-color: ${(props) => props.theme.mainColor};
   color: ${(props) => props.theme.backgroundColor};
+`;
+
+export const Logo = styled(Link)`
+  padding: 3.5em;
 `;

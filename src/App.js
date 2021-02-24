@@ -6,8 +6,6 @@ import { ThemeProvider } from "styled-components";
 import { createGlobalStyle } from "styled-components";
 import { Route, Switch } from "react-router";
 
-// import logo from "./components/images/logo.jpg";
-
 const GlobalStyle = createGlobalStyle`
 body {
   font-family: Kunstler Script;
