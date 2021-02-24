@@ -1,9 +1,12 @@
 import FlowersList from "./components/ProductList.js";
 import Home from "./components/Home.js";
-import { ThemeButton } from "./components/Styles.js";
+import NavBar from "./components/Navbar.js";
 import { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { createGlobalStyle } from "styled-components";
+import { Route, Switch } from "react-router";
+
+// import logo from "./components/images/logo.jpg";
 
 const GlobalStyle = createGlobalStyle`
 body {
@@ -41,11 +44,15 @@ function App() {
     <div>
       <ThemeProvider theme={theme[currentTheme]}>
         <GlobalStyle />
-        <ThemeButton onClick={toggleTheme}>
-          {currentTheme === "light" ? "Dark" : "Light"} Mode
-        </ThemeButton>
-        <Home />
-        <FlowersList />
+        <NavBar currentTheme={currentTheme} toggleTheme={toggleTheme} />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/ProductList">
+            <FlowersList />
+          </Route>
+        </Switch>
       </ThemeProvider>
     </div>
   );
