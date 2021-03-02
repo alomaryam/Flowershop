@@ -4,7 +4,7 @@ import ProductItem from "./ProductItem.js";
 import styled from "styled-components";
 import SearchBar from "./SearchBar.js";
 import { useState } from "react";
-import { observable } from "mobx";
+import { observer } from "mobx-react";
 
 const Items = styled.div`
   display: flex;
@@ -38,4 +38,4 @@ let FlowersList = () => {
   );
 };
 
-export default observable(FlowersList);
+export default observer(FlowersList);
