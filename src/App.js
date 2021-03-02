@@ -23,11 +23,13 @@ const theme = {
     backgroundColor: "#ECEDF3",
     color: "#B50054",
     mainColor: "#101C28",
+    red: "red",
   },
   dark: {
     backgroundColor: "#090A0D",
     color: "#88AABF",
     mainColor: "#F4F4F4",
+    red: "red",
   },
 };
 

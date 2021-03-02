@@ -10,6 +10,10 @@ export const ThemeButton = styled.button`
   color: ${(props) => props.theme.backgroundColor};
 `;
 
+export const DeleteButtonStyled = styled.p`
+  color: ${(props) => props.theme.red};
+`;
+
 export const Logo = styled(Link)`
   padding: 3.5em;
 `;

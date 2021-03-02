@@ -1,8 +1,10 @@
-import Flowers from "./Products.js";
+import productStore from "../stores/productStore.js";
 import ProductItem from "./ProductItem.js";
+// import Flowers from "./Products.js";
 import styled from "styled-components";
 import SearchBar from "./SearchBar.js";
 import { useState } from "react";
+import { observable } from "mobx";
 
 const Items = styled.div`
   display: flex;
@@ -14,11 +16,17 @@ const Items = styled.div`
 `;
 
 let FlowersList = () => {
+  const deleteVase = (flowerId) => {
+    console.log(`Delete vase with the ID ${flowerId}`);
+  };
+
   const [query, setQuery] = useState("");
 
-  const flowerList = Flowers.filter((flower) =>
-    flower.name.includes(query)
-  ).map((flower) => <ProductItem item={flower} key={flower.id} />);
+  const flowerList = productStore.flowers
+    .filter((flower) => flower.name.includes(query))
+    .map((flower) => (
+      <ProductItem item={flower} key={flower.id} deleteVase={deleteVase} />
+    ));
 
   // console.log("filteredFlowers", flowerList);
 
@@ -30,4 +38,4 @@ let FlowersList = () => {
   );
 };
 
-export default FlowersList;
+export default observable(FlowersList);
