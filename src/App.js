@@ -1,3 +1,5 @@
+import productStore from "./stores/productStore.js";
+// import Flowers from "./components/Products.js";
 import FlowersList from "./components/ProductList.js";
 import Home from "./components/Home.js";
 import NavBar from "./components/Navbar.js";
@@ -5,6 +7,7 @@ import { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { createGlobalStyle } from "styled-components";
 import { Route, Switch } from "react-router";
+import { observer } from "mobx-react";
 
 const GlobalStyle = createGlobalStyle`
 body {
@@ -50,7 +53,7 @@ function App() {
             <Home />
           </Route>
           <Route path="/ProductList">
-            <FlowersList />
+            <FlowersList flowers={productStore.flowers} />
           </Route>
         </Switch>
       </ThemeProvider>
@@ -58,4 +61,4 @@ function App() {
   );
 }
 
-export default App;
+export default observer(App);

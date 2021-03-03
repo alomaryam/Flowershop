@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { DeleteButtonStyled } from "./Styles.js";
+import productStore from "../stores/productStore";
 
 const FlowerImage = styled.img`
   height: 400px;
@@ -7,21 +7,24 @@ const FlowerImage = styled.img`
   margin: 5px;
 `;
 
-const ProductItem = (props) => {
-  const item = props.item;
+const DeleteButtonStyled = styled.p`
+  color: ${(props) => props.theme.red};
+`;
 
-  const handleDelete = () => {
-    props.deleteVase(item.id);
-    alert(`Delete Vase #${item.id}`);
-  };
-
+const ProductItem = ({ item }) => {
   return (
     <div>
       <FlowerImage src={item.image} />
       <h2>{item.name}</h2>
       <p>{item.price} KD </p>
-      <DeleteButtonStyled onClick={handleDelete}>Delete</DeleteButtonStyled>
+      <p>{item.description}</p>
+      <DeleteButtonStyled onClick={() => productStore.deleteFlower(item.id)}>
+        Delete
+      </DeleteButtonStyled>
     </div>
   );
 };
+
 export default ProductItem;
+
+/**/
